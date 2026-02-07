@@ -11,4 +11,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    host: true, // Allow external connections
+    allowedHosts: ["all"], // Allow all hosts (prevents blocking from proxy/iframe hosts)
+  },
 })
